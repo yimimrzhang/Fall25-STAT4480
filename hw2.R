@@ -91,7 +91,8 @@ library(fBasics)
 basicStats(organics$PromSpend)
 basicStats(organics.xf$PromSpend)
 
-# part d #
+
+# part 4 #
 missprop <- organics %>% 
   summarise(across(everything() & !DemCluster, ~ sum(is.na(.))/length(.))) %>%  # remove DemCluster as its model role is Rejected
   unlist() %>%            

@@ -29,7 +29,7 @@ census.scale<-census.fltr %>% select(c(RegDens, MedHHInc, MeanHHSz))
 
 library(caret)
 stdParams <- census.scale %>% 
-              preProcess(method=c("scale"))
+              preProcess(method=c("center",scale"))
 
 census.scale<- predict(stdParams, census.scale)
 
